@@ -362,7 +362,7 @@ function ClientInputForm({ flightId }) {
               onClick={() => setActiveTab("get-offer")}
               aria-controls="panel-get-offer"
             >
-              Next — Get Offer
+              Next - Get Offer
             </button>
             <button
               type="submit"

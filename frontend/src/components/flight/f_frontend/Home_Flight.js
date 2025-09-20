@@ -1,8 +1,23 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./HomeFlight.css";
-//import '../Resources/Flight_Styles.css';
 
+// Flight Ribbon component (for icon ribbon on each card)
+function FlightRibbon() {
+  return (
+    <div className="flight-ribbon" title="Flight">
+      <svg
+        width="30"
+        height="30"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-label="Flight"
+      >
+        <path d="M21 16v-2l-8-5V4.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1v1l3-.5 3 .5v-1l-2-1v-5.5l8 2.5z" />
+      </svg>
+    </div>
+  );
+}
 
 export default function HomeFlight() {
   // Data
@@ -218,25 +233,19 @@ export default function HomeFlight() {
   ];
 
   function AdBanner({ image, link, alt }) {
-  return (
-    <div className="ad-banner">
-      <a href={link} target="_blank" rel="noopener noreferrer">
-        <img src={image} alt={alt} />
-      </a>
-    </div>
-  );
-}
+    return (
+      <div className="ad-banner">
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          <img src={image} alt={alt} />
+        </a>
+      </div>
+    );
+  }
 
   return (
     <div className="home-container">
       {/* Top bar */}
       <div className="top-bar">
-        
-        {/* Example ad between search and results */}
-
-
-
-
         <div className="topbar-right">
           <div className="inline-field">
             <label htmlFor="currency">Currency</label>
@@ -307,7 +316,6 @@ export default function HomeFlight() {
                 ))}
               </select>
             </div>
-
             <div className="inline-field">
               <label htmlFor="adults">Passengers</label>
               <div className="qty-control" aria-label="Adults">
@@ -526,6 +534,7 @@ export default function HomeFlight() {
           <div className="flight-card-list">
             {sortedFlights.map((flight) => (
               <div className="flight-card" key={flight._id}>
+                <FlightRibbon />
                 <div className="flight-img-wrapper">
                   <img
                     src={flight.airlineCoverImage || "/default-plane.jpg"}

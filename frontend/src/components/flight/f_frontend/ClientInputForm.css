@@ -2,7 +2,7 @@
 :root {
   --bg: #f6f8fa;
   --panel: #ffffff;
-  --accent: #1d4ed8;
+  --accent: linear-gradient(135deg, #0077ff, #000000);
   --muted: #6b7280;
   --text: #0b2140;
   --border: #e6e9ef;
@@ -19,7 +19,7 @@
 body.dark-mode {
   --bg: #071330;
   --panel: #0f2a55;
-  --accent: #60a5fa;
+  --accent: linear-gradient(135deg, #0077ff, #000000);
   --muted: #cbd5e1;
   --text: #e6eefc;
   --border: #14355e;
@@ -54,8 +54,11 @@ body.dark-mode {
 body.dark-mode .cif-container {
   background: linear-gradient(180deg, rgba(12,33,72,0.8), rgba(12,33,72,0.95));
   border: 1px solid rgba(20,53,94,0.6);
+  
+html{
+    background-image: url('https://tse2.mm.bing.net/th/id/OIP.0_TXxI9I_zLJ9Kmh45ltpwHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3');
 }
-
+}
 .cif-header {
   padding: 20px 24px;
   border-bottom: 1px solid var(--border);
@@ -189,6 +192,7 @@ body.dark-mode .cif-container {
   gap: 12px;
   margin-top: 6px;
   flex-wrap: wrap;
+  
 }
 
 .cif-btn,
