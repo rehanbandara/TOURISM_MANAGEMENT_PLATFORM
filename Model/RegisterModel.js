@@ -1,26 +1,11 @@
+// models/RegisterModel.js
 const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
 
-const registerSchema = new Schema({
-    F_name: {
-        type: String,
-        required: true
-    },
-    email: {
-        type: String,
-        required: true,
-        unique: true // email should be unique
-    },
-    password: {
-        type: String,
-        required: true
-    },
-    ComPassword: {
-        type: String,
-        required: true
-    }
-}
+const RegisterSchema = new mongoose.Schema({
+  fullname: { type: String, required: true },
+  email:    { type: String, required: true, unique: true },
+  password: { type: String, required: true },
+  comPassword: { type: String, required: true }  // confirm password (not recommended to store)
+});
 
-);
-
-module.exports = mongoose.model("RegisterModel", registerSchema);
+module.exports = mongoose.model("Register", RegisterSchema);
