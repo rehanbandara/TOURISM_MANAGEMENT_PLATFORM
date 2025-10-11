@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 import "./HomeFlight.css";
 
 // Flight Ribbon component (for icon ribbon on each card)
-function FlightRibbon() {
+function FliFrontHF_FlightRibbon() {
   return (
-    <div className="flight-ribbon" title="Flight">
+    <div className="fli_frontHF_flightRibbon" title="Flight">
       <svg
         width="30"
         height="30"
@@ -19,7 +19,7 @@ function FlightRibbon() {
   );
 }
 
-export default function HomeFlight() {
+export default function FliFrontHF_HomeFlight() {
   // Data
   const [flights, setFlights] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -232,9 +232,9 @@ export default function HomeFlight() {
     { from: "London", to: "Colombo" },
   ];
 
-  function AdBanner({ image, link, alt }) {
+  function FliFrontHF_AdBanner({ image, link, alt }) {
     return (
-      <div className="ad-banner">
+      <div className="fli_frontHF_adBanner">
         <a href={link} target="_blank" rel="noopener noreferrer">
           <img src={image} alt={alt} />
         </a>
@@ -243,11 +243,11 @@ export default function HomeFlight() {
   }
 
   return (
-    <div className="home-container">
+    <div className="fli_frontHF_homeContainer">
       {/* Top bar */}
-      <div className="top-bar">
-        <div className="topbar-right">
-          <div className="inline-field">
+      <div className="fli_frontHF_topBar">
+        <div className="fli_frontHF_topbarRight">
+          <div className="fli_frontHF_inlineField">
             <label htmlFor="currency">Currency</label>
             <select id="currency" value={currency} onChange={(e) => setCurrency(e.target.value)}>
               <option value="USD">USD</option>
@@ -256,7 +256,7 @@ export default function HomeFlight() {
               <option value="INR">INR</option>
             </select>
           </div>
-          <div className="inline-field">
+          <div className="fli_frontHF_inlineField">
             <label htmlFor="locale">Language</label>
             <select id="locale" value={locale} onChange={(e) => setLocale(e.target.value)}>
               <option value="en-us">English</option>
@@ -266,11 +266,11 @@ export default function HomeFlight() {
       </div>
 
       {/* Search */}
-      <section className="search-section">
-        <form className="search-form" onSubmit={handleSearch}>
+      <section className="fli_frontHF_searchSection">
+        <form className="fli_frontHF_searchForm" onSubmit={handleSearch}>
           {/* Trip type & class row */}
-          <div className="search-options" role="group" aria-label="Trip options">
-            <label className="radio">
+          <div className="fli_frontHF_searchOptions" role="group" aria-label="Trip options">
+            <label className="fli_frontHF_radio">
               <input
                 type="radio"
                 name="trip"
@@ -280,7 +280,7 @@ export default function HomeFlight() {
               />
               Round-trip
             </label>
-            <label className="radio">
+            <label className="fli_frontHF_radio">
               <input
                 type="radio"
                 name="trip"
@@ -290,7 +290,7 @@ export default function HomeFlight() {
               />
               One-way
             </label>
-            <label className="radio">
+            <label className="fli_frontHF_radio">
               <input
                 type="radio"
                 name="trip"
@@ -301,8 +301,8 @@ export default function HomeFlight() {
               Multi-city
             </label>
 
-            <div className="spacer" />
-            <div className="inline-field">
+            <div className="fli_frontHF_spacer" />
+            <div className="fli_frontHF_inlineField">
               <label htmlFor="cabin">Cabin class</label>
               <select
                 id="cabin"
@@ -316,12 +316,12 @@ export default function HomeFlight() {
                 ))}
               </select>
             </div>
-            <div className="inline-field">
+            <div className="fli_frontHF_inlineField">
               <label htmlFor="adults">Passengers</label>
-              <div className="qty-control" aria-label="Adults">
+              <div className="fli_frontHF_qtyControl" aria-label="Adults">
                 <button
                   type="button"
-                  className="qty-btn"
+                  className="fli_frontHF_qtyBtn"
                   onClick={decAdults}
                   aria-label="Decrease adults"
                 >
@@ -337,7 +337,7 @@ export default function HomeFlight() {
                 />
                 <button
                   type="button"
-                  className="qty-btn"
+                  className="fli_frontHF_qtyBtn"
                   onClick={incAdults}
                   aria-label="Increase adults"
                 >
@@ -348,8 +348,8 @@ export default function HomeFlight() {
           </div>
 
           {/* Fields row */}
-          <div className="search-fields">
-            <div className="field">
+          <div className="fli_frontHF_searchFields">
+            <div className="fli_frontHF_field">
               <label htmlFor="departure">Leaving from</label>
               <input
                 id="departure"
@@ -364,7 +364,7 @@ export default function HomeFlight() {
 
             <button
               type="button"
-              className="swap-btn"
+              className="fli_frontHF_swapBtn"
               onClick={handleSwap}
               aria-label="Swap departure and destination"
               title="Swap"
@@ -372,7 +372,7 @@ export default function HomeFlight() {
               ⇄
             </button>
 
-            <div className="field">
+            <div className="fli_frontHF_field">
               <label htmlFor="destination">Going to</label>
               <input
                 id="destination"
@@ -385,7 +385,7 @@ export default function HomeFlight() {
               />
             </div>
 
-            <div className="field">
+            <div className="fli_frontHF_field">
               <label htmlFor="date">Date</label>
               <input
                 id="date"
@@ -397,7 +397,7 @@ export default function HomeFlight() {
               />
             </div>
 
-            <div className="field">
+            <div className="fli_frontHF_field">
               <label htmlFor="description">Keyword</label>
               <input
                 id="description"
@@ -408,13 +408,13 @@ export default function HomeFlight() {
               />
             </div>
 
-            <div className="field actions">
-              <button type="submit" className="search-btn">
+            <div className="fli_frontHF_field fli_frontHF_actions">
+              <button type="submit" className="fli_frontHF_searchBtn">
                 {loading ? "Searching..." : "Search"}
               </button>
               <button
                 type="button"
-                className="clear-btn"
+                className="fli_frontHF_clearBtn"
                 onClick={handleClear}
                 disabled={loading}
                 title="Clear all filters"
@@ -425,13 +425,13 @@ export default function HomeFlight() {
           </div>
 
           {/* Quick picks */}
-          <div className="chips">
-            <span className="chips-title">Quick picks:</span>
+          <div className="fli_frontHF_chips">
+            <span className="fli_frontHF_chipsTitle">Quick picks:</span>
             {quickPicks.map((q, i) => (
               <button
                 type="button"
                 key={i}
-                className="chip"
+                className="fli_frontHF_chip"
                 onClick={() =>
                   setFilters((f) => ({
                     ...f,
@@ -464,15 +464,15 @@ export default function HomeFlight() {
       </section>
 
       {/* Results toolbar */}
-      <section className="results-section">
-        <div className="toolbar">
-          <div className="result-meta">
+      <section className="fli_frontHF_resultsSection">
+        <div className="fli_frontHF_toolbar">
+          <div className="fli_frontHF_resultMeta">
             <h2>Available Flights</h2>
             {!loading && !error && (
-              <span className="count">Showing {sortedFlights.length}</span>
+              <span className="fli_frontHF_count">Showing {sortedFlights.length}</span>
             )}
           </div>
-          <div className="inline-field">
+          <div className="fli_frontHF_inlineField">
             <label htmlFor="sortBy">Sort by</label>
             <select
               id="sortBy"
@@ -486,19 +486,19 @@ export default function HomeFlight() {
           </div>
         </div>
 
-        {error && <div className="notice error">{error}</div>}
+        {error && <div className="fli_frontHF_notice fli_frontHF_error">{error}</div>}
 
         {/* Skeletons */}
         {loading && (
-          <div className="flight-card-list">
+          <div className="fli_frontHF_flightCardList">
             {Array.from({ length: 6 }).map((_, i) => (
-              <div className="flight-card skeleton-card" key={i}>
-                <div className="flight-img-wrapper skeleton-bg" />
-                <div className="flight-card-body">
-                  <div className="skeleton-line w-60" />
-                  <div className="skeleton-line w-90" />
-                  <div className="skeleton-line w-40" />
-                  <div className="skeleton-btn" />
+              <div className="fli_frontHF_flightCard fli_frontHF_skeletonCard" key={i}>
+                <div className="fli_frontHF_flightImgWrapper fli_frontHF_skeletonBg" />
+                <div className="fli_frontHF_flightCardBody">
+                  <div className="fli_frontHF_skeletonLine fli_frontHF_w60" />
+                  <div className="fli_frontHF_skeletonLine fli_frontHF_w90" />
+                  <div className="fli_frontHF_skeletonLine fli_frontHF_w40" />
+                  <div className="fli_frontHF_skeletonBtn" />
                 </div>
               </div>
             ))}
@@ -506,13 +506,13 @@ export default function HomeFlight() {
         )}
 
         {!loading && !error && sortedFlights.length === 0 && (
-          <div className="empty-state">
-            <p className="no-results">No flights found. Try adjusting your search.</p>
-            <div className="chips">
-              <span className="chips-title">Try:</span>
+          <div className="fli_frontHF_emptyState">
+            <p className="fli_frontHF_noResults">No flights found. Try adjusting your search.</p>
+            <div className="fli_frontHF_chips">
+              <span className="fli_frontHF_chipsTitle">Try:</span>
               <button
                 type="button"
-                className="chip"
+                className="fli_frontHF_chip"
                 onClick={() =>
                   setFilters((f) => ({ ...f, date: "" }))
                 }
@@ -521,7 +521,7 @@ export default function HomeFlight() {
               </button>
               <button
                 type="button"
-                className="chip"
+                className="fli_frontHF_chip"
                 onClick={() => setFilters({ departure: "", destination: "", description: "", date: "" })}
               >
                 Clear all filters
@@ -531,11 +531,11 @@ export default function HomeFlight() {
         )}
 
         {!loading && !error && sortedFlights.length > 0 && (
-          <div className="flight-card-list">
+          <div className="fli_frontHF_flightCardList">
             {sortedFlights.map((flight) => (
-              <div className="flight-card" key={flight._id}>
-                <FlightRibbon />
-                <div className="flight-img-wrapper">
+              <div className="fli_frontHF_flightCard" key={flight._id}>
+                <FliFrontHF_FlightRibbon />
+                <div className="fli_frontHF_flightImgWrapper">
                   <img
                     src={flight.airlineCoverImage || "/default-plane.jpg"}
                     alt={`${flight.departure} to ${flight.destination}`}
@@ -544,20 +544,20 @@ export default function HomeFlight() {
                     }}
                   />
                 </div>
-                <div className="flight-card-body">
-                  <h3 className="flight-route">
-                    {flight.departure} <span className="arrow">→</span> {flight.destination}
+                <div className="fli_frontHF_flightCardBody">
+                  <h3 className="fli_frontHF_flightRoute">
+                    {flight.departure} <span className="fli_frontHF_arrow">→</span> {flight.destination}
                   </h3>
 
                   {filters.date && (
-                    <p className="flight-date">Date: {filters.date}</p>
+                    <p className="fli_frontHF_flightDate">Date: {filters.date}</p>
                   )}
 
-                  <p className="flight-description">
-                    {flight.description || <span className="muted">No description</span>}
+                  <p className="fli_frontHF_flightDescription">
+                    {flight.description || <span className="fli_frontHF_muted">No description</span>}
                   </p>
 
-                  <button className="flight-card-btn" onClick={() => handleBook(flight)}>
+                  <button className="fli_frontHF_flightCardBtn" onClick={() => handleBook(flight)}>
                     Find Flight
                   </button>
                 </div>

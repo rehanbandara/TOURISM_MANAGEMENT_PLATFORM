@@ -1,7 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, useParams } from "react-router-dom";
 import Nav from "./components/Nav";
+
+// Main sys
 import HomeMainSys from "./components/HomeMainSys";
+
+//Flight subsys
 import HomeFlight from "./components/flight/f_frontend/Home_Flight";
 import ManageFlightsDashboard from "./components/flight/f_backend/Manage_Flights_Dashboard";
 import ClientVisitsPage from "./components/flight/f_backend/ClientVisits_Page";
@@ -14,6 +18,10 @@ function BookFlightPage() {
   return <ClientInputForm flightId={id} />;
 }
 
+
+
+
+// Home Main Nav Bar
 function App() {
   return (
     <Router>

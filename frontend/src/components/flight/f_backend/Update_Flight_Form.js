@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./AdminFlights.css";
-//import '../Resources/Flight_Styles.css';
 
 export default function UpdateFlightForm() {
   const { id } = useParams();
@@ -76,36 +75,36 @@ export default function UpdateFlightForm() {
 
   if (loading) {
     return (
-      <div className="admin-wrap">
-        <div className="card" style={{ maxWidth: 520, margin: "2rem auto" }}>
-          <div className="skeleton-line w-100" style={{ height: 18, marginBottom: 10 }} />
-          <div className="skeleton-line w-100" style={{ height: 180 }} />
+      <div className="fli_admin-wrap">
+        <div className="fli_card" style={{ maxWidth: 520, margin: "2rem auto" }}>
+          <div className="fli_skeleton-line fli_w-100" style={{ height: 18, marginBottom: 10 }} />
+          <div className="fli_skeleton-line fli_w-100" style={{ height: 180 }} />
         </div>
       </div>
     );
   }
 
   return (
-    <div className="admin-wrap">
-      <form className="card form" onSubmit={handleSubmit} style={{ maxWidth: 560, margin: "2rem auto" }}>
-        <div className="form-header">
-          <h3 className="card-title">Edit Flight</h3>
+    <div className="fli_admin-wrap">
+      <form className="fli_card fli_form" onSubmit={handleSubmit} style={{ maxWidth: 560, margin: "2rem auto" }}>
+        <div className="fli_form-header">
+          <h3 className="fli_card-title">Edit Flight</h3>
         </div>
 
-        <div className="form-grid">
-          <label className="field field-full">
+        <div className="fli_form-grid">
+          <label className="fli_field fli_field-full">
             <span>Airline Cover Image URL</span>
             <input
               name="airlineCoverImage"
               placeholder="https://…"
               value={formData.airlineCoverImage}
               onChange={handleChange}
-              className="input"
+              className="fli_input"
             />
           </label>
 
           {formData.airlineCoverImage && (
-            <div className="preview field-full">
+            <div className="fli_preview fli_field-full">
               <img
                 src={formData.airlineCoverImage}
                 alt="Cover preview"
@@ -116,7 +115,7 @@ export default function UpdateFlightForm() {
             </div>
           )}
 
-          <label className="field">
+          <label className="fli_field">
             <span>From (e.g. CMB)</span>
             <input
               name="departure"
@@ -124,11 +123,11 @@ export default function UpdateFlightForm() {
               value={formData.departure}
               onChange={handleChange}
               required
-              className="input"
+              className="fli_input"
             />
           </label>
 
-          <label className="field">
+          <label className="fli_field">
             <span>To (e.g. SIN)</span>
             <input
               name="destination"
@@ -136,30 +135,30 @@ export default function UpdateFlightForm() {
               value={formData.destination}
               onChange={handleChange}
               required
-              className="input"
+              className="fli_input"
             />
           </label>
 
-          <label className="field field-full">
+          <label className="fli_field fli_field-full">
             <span>Description</span>
             <input
               name="description"
               placeholder="Short description"
               value={formData.description}
               onChange={handleChange}
-              className="input"
+              className="fli_input"
             />
           </label>
         </div>
 
-        {err && <div className="notice error">{err}</div>}
-        {ok && <div className="notice success">{ok}</div>}
+        {err && <div className="fli_notice fli_error">{err}</div>}
+        {ok && <div className="fli_notice fli_success">{ok}</div>}
 
-        <div className="form-actions">
-          <button type="button" className="btn btn-secondary" onClick={handleCancel}>
+        <div className="fli_form-actions">
+          <button type="button" className="fli_btn fli_btn-secondary" onClick={handleCancel}>
             Cancel
           </button>
-          <button type="submit" className="btn" disabled={saving}>
+          <button type="submit" className="fli_btn" disabled={saving}>
             {saving ? "Saving…" : "Save"}
           </button>
         </div>

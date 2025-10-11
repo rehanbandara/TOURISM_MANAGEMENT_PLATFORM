@@ -135,7 +135,7 @@ exports.bookFlight = async (req, res) => {
     }
 //cons url
     const base =`https://flights.booking.com/flights/${encodeURIComponent(fromCode)}-${encodeURIComponent(toCode)}`;
-    const qs=newURLSearchParams({
+    const qs= new URLSearchParams({
       type,
       from: fromCode,
       to: toCode,

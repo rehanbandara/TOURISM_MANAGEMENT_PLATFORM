@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AdminFlights.css";
-//import '../Resources/Flight_Styles.css';
 
 export default function PromoRecipientsPage() {
   const [visits, setVisits] = useState([]);
@@ -45,7 +44,6 @@ export default function PromoRecipientsPage() {
   }, []);
 
   function handleDownloadPDF() {
-    // Open in a new tab 
     window.open("http://localhost:5000/api/flights/promo/pdf", "_blank", "noopener,noreferrer");
   }
 
@@ -62,8 +60,8 @@ export default function PromoRecipientsPage() {
     if (!promo) return;
     navigator.clipboard
       .writeText(promo)
-      .then(() => setToast({ type: "success", text: "Promo code copied!" }))
-      .catch(() => setToast({ type: "error", text: "Copy failed. Select and copy manually." }));
+      .then(() => setToast({ type: "fli_success", text: "Promo code copied!" }))
+      .catch(() => setToast({ type: "fli_error", text: "Copy failed. Select and copy manually." }));
   }
 
   const filteredSorted = useMemo(() => {
@@ -102,56 +100,55 @@ export default function PromoRecipientsPage() {
   }, [filteredSorted, page, pageSize]);
 
   useEffect(() => {
-    // Reset to page 1 when filters change
     setPage(1);
   }, [query, onlyMissing, sortBy, pageSize]);
 
   return (
-    <div className="admin-wrap">
-      <div className="admin-header">
-        <div className="admin-title-wrap">
-          <h2 className="admin-title">Promo Recipients</h2>
-          <p className="admin-sub">Send WhatsApp promos, export PDF, and review recent visits.</p>
+    <div className="fli_admin-wrap">
+      <div className="fli_admin-header">
+        <div className="fli_admin-title-wrap">
+          <h2 className="fli_admin-title">Promo Recipients</h2>
+          <p className="fli_admin-sub">Send WhatsApp promos, export PDF, and review recent visits.</p>
         </div>
-        <div className="admin-actions">
-          <button className="btn btn-secondary" onClick={() => navigate("/flights/manage")}>
+        <div className="fli_admin-actions">
+          <button className="fli_btn fli_btn-secondary" onClick={() => navigate("/flights/manage")}>
             ← Back to Dashboard
           </button>
-          <button className="btn" onClick={handleDownloadPDF} title="Export PDF">
+          <button className="fli_btn" onClick={handleDownloadPDF} title="Export PDF">
             ⬇️ Export PDF
           </button>
-          <button className="btn btn-outline" onClick={fetchVisitsData} title="Refresh">
+          <button className="fli_btn fli_btn-outline" onClick={fetchVisitsData} title="Refresh">
             ↻ Refresh
           </button>
         </div>
       </div>
 
-      <div className="admin-stats">
-        <div className="stat">
-          <div className="stat-value">{totalVisits}</div>
-          <div className="stat-label">Total Promo Visits</div>
+      <div className="fli_admin-stats">
+        <div className="fli_stat">
+          <div className="fli_stat-value">{totalVisits}</div>
+          <div className="fli_stat-label">Total Promo Visits</div>
         </div>
-        <div className="stat">
-          <div className="stat-value">{visits.length}</div>
-          <div className="stat-label">Loaded Records</div>
+        <div className="fli_stat">
+          <div className="fli_stat-value">{visits.length}</div>
+          <div className="fli_stat-label">Loaded Records</div>
         </div>
-        <div className="stat">
-          <div className="stat-value">
+        <div className="fli_stat">
+          <div className="fli_stat-value">
             {visits.filter((v) => v.phone && v.promoCode).length}
           </div>
-          <div className="stat-label">Ready to Send</div>
+          <div className="fli_stat-label">Ready to Send</div>
         </div>
       </div>
 
-      <div className="toolbar">
-        <div className="toolbar-left">
+      <div className="fli_toolbar">
+        <div className="fli_toolbar-left">
           <input
-            className="input"
+            className="fli_input"
             placeholder="Search name, phone, route, promo..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />
-          <label className="checkbox">
+          <label className="fli_checkbox">
             <input
               type="checkbox"
               checked={onlyMissing}
@@ -160,19 +157,19 @@ export default function PromoRecipientsPage() {
             Show only missing Phone/Promo
           </label>
         </div>
-        <div className="toolbar-right">
-          <label className="inline">
+        <div className="fli_toolbar-right">
+          <label className="fli_inline">
             Sort
-            <select className="select" value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
+            <select className="fli_select" value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
               <option value="date-desc">Newest first</option>
               <option value="date-asc">Oldest first</option>
               <option value="name-az">Name A → Z</option>
               <option value="name-za">Name Z → A</option>
             </select>
           </label>
-          <label className="inline">
+          <label className="fli_inline">
             Rows
-            <select className="select" value={pageSize} onChange={(e) => setPageSize(Number(e.target.value))}>
+            <select className="fli_select" value={pageSize} onChange={(e) => setPageSize(Number(e.target.value))}>
               {[10, 20, 50].map((n) => (
                 <option key={n} value={n}>
                   {n}
@@ -183,28 +180,28 @@ export default function PromoRecipientsPage() {
         </div>
       </div>
 
-      {err && <div className="notice error">{err}</div>}
+      {err && <div className="fli_notice fli_error">{err}</div>}
 
-      <div className="table-wrap">
-        <table className="table">
+      <div className="fli_table-wrap">
+        <table className="fli_table">
           <thead>
             <tr>
-              <th className="col-narrow">#</th>
+              <th className="fli_col-narrow">#</th>
               <th>Name</th>
               <th>Phone</th>
               <th>From</th>
               <th>To</th>
               <th>Date</th>
               <th>PromoCode</th>
-              <th className="col-actions">Actions</th>
+              <th className="fli_col-actions">Actions</th>
             </tr>
           </thead>
           <tbody>
             {loading &&
               Array.from({ length: 8 }).map((_, i) => (
-                <tr key={`sk-${i}`} className="skeleton-row">
+                <tr key={`sk-${i}`} className="fli_skeleton-row">
                   <td colSpan={8}>
-                    <div className="skeleton-line w-100" />
+                    <div className="fli_skeleton-line fli_w-100" />
                   </td>
                 </tr>
               ))}
@@ -218,7 +215,7 @@ export default function PromoRecipientsPage() {
                 const canSend = Boolean(v.phone && v.promoCode);
                 return (
                   <tr key={v._id}>
-                    <td className="col-narrow">{idx}</td>
+                    <td className="fli_col-narrow">{idx}</td>
                     <td>{v.name || "-"}</td>
                     <td>{v.phone || "-"}</td>
                     <td>{v.flight?.departure || "-"}</td>
@@ -226,29 +223,29 @@ export default function PromoRecipientsPage() {
                     <td>{dateText}</td>
                     <td>
                       {v.promoCode ? (
-                        <div className="promo-cell">
-                          <span className="tag">{v.promoCode}</span>
+                        <div className="fli_promo-cell">
+                          <span className="fli_tag">{v.promoCode}</span>
                           <button
-                            className="btn btn-mini"
+                            className="fli_btn fli_btn-mini"
                             onClick={() => copyPromo(v.promoCode)}
                             title="Copy promo code"
                           >Copy</button>
                         </div>
                       ) : (
-                        <span className="muted">-</span>
+                        <span style={{ color: "var(--muted)" }}>-</span>
                       )}
                     </td>
-                    <td className="col-actions">
+                    <td className="fli_col-actions">
                       {canSend ? (
                         <a
                           href={getWhatsAppUrl(v.phone, v.name, v.promoCode)}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="btn btn-wa"
+                          className="fli_btn fli_btn-wa"
                           title="Send WhatsApp"
                         >WhatsApp</a>
                       ) : (
-                        <span className="muted">No Phone/Promo</span>
+                        <span style={{ color: "var(--muted)" }}>No Phone/Promo</span>
                       )}
                     </td>
                   </tr>
@@ -257,7 +254,7 @@ export default function PromoRecipientsPage() {
 
             {!loading && paged.length === 0 && (
               <tr>
-                <td colSpan={8} className="empty">
+                <td colSpan={8} className="fli_empty">
                   No data found.
                 </td>
               </tr>
@@ -266,21 +263,20 @@ export default function PromoRecipientsPage() {
         </table>
       </div>
 
-      {/* Pagination */}
       {!loading && filteredSorted.length > pageSize && (
-        <div className="pagination">
+        <div className="fli_pagination">
           <button
-            className="btn btn-outline"
+            className="fli_btn fli_btn-outline"
             onClick={() => setPage((p) => Math.max(1, p - 1))}
             disabled={page === 1}
           >
             Prev
           </button>
-          <span className="page-info">
+          <span className="fli_page-info">
             Page {page} of {Math.ceil(filteredSorted.length / pageSize)}
           </span>
           <button
-            className="btn btn-outline"
+            className="fli_btn fli_btn-outline"
             onClick={() =>
               setPage((p) => Math.min(Math.ceil(filteredSorted.length / pageSize), p + 1))
             }
@@ -292,7 +288,7 @@ export default function PromoRecipientsPage() {
       )}
 
       {toast && (
-        <div className={`toast ${toast.type}`} role="status" onAnimationEnd={() => setToast(null)}>
+        <div className={`fli_toast ${toast.type}`} role="status" onAnimationEnd={() => setToast(null)}>
           {toast.text}
         </div>
       )}

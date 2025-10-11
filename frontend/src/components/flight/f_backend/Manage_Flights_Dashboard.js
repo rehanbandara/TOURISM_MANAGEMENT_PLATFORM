@@ -1,8 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./AdminFlights.css";
-//import '../Resources/Flight_Styles.css';
-
 
 function AddFlightForm({ onFlightAdded }) {
   const [formData, setFormData] = useState({
@@ -57,23 +55,23 @@ function AddFlightForm({ onFlightAdded }) {
   }
 
   return (
-    <form className="card form" onSubmit={handleSubmit} noValidate>
-      <div className="form-header">
-        <h3 className="card-title">Add New</h3>
+    <form className="fli_card fli_form" onSubmit={handleSubmit} noValidate>
+      <div className="fli_form-header">
+        <h3 className="fli_card-title">Add New</h3>
       </div>
-      <div className="form-grid">
-        <label className="field">
+      <div className="fli_form-grid">
+        <label className="fli_field">
           <span>Cover Image URL</span>
           <input
             name="airlineCoverImage"
             placeholder="https://…"
             value={formData.airlineCoverImage}
             onChange={handleChange}
-            className="input"
+            className="fli_input"
           />
         </label>
 
-        <label className="field">
+        <label className="fli_field">
           <span>From (e.g. CMB)</span>
           <input
             name="departure"
@@ -81,11 +79,11 @@ function AddFlightForm({ onFlightAdded }) {
             value={formData.departure}
             onChange={handleChange}
             required
-            className="input"
+            className="fli_input"
           />
         </label>
 
-        <label className="field">
+        <label className="fli_field">
           <span>To (e.g. SIN)</span>
           <input
             name="destination"
@@ -93,23 +91,23 @@ function AddFlightForm({ onFlightAdded }) {
             value={formData.destination}
             onChange={handleChange}
             required
-            className="input"
+            className="fli_input"
           />
         </label>
 
-        <label className="field field-full">
+        <label className="fli_field fli_field-full">
           <span>Description</span>
           <input
             name="description"
             placeholder="Short description"
             value={formData.description}
             onChange={handleChange}
-            className="input"
+            className="fli_input"
           />
         </label>
 
         {formData.airlineCoverImage && (
-          <div className="preview field-full">
+          <div className="fli_preview fli_field-full">
             <img
               src={formData.airlineCoverImage}
               alt="Cover preview"
@@ -121,11 +119,11 @@ function AddFlightForm({ onFlightAdded }) {
         )}
       </div>
 
-      {err && <div className="notice error">{err}</div>}
-      {ok && <div className="notice success">{ok}</div>}
+      {err && <div className="fli_notice fli_error">{err}</div>}
+      {ok && <div className="fli_notice fli_success">{ok}</div>}
 
-      <div className="form-actions">
-        <button className="btn" type="submit" disabled={!canSubmit || loading}>
+      <div className="fli_form-actions">
+        <button className="fli_btn" type="submit" disabled={!canSubmit || loading}>
           {loading ? "Adding…" : "Add Flight"}
         </button>
       </div>
@@ -133,13 +131,12 @@ function AddFlightForm({ onFlightAdded }) {
   );
 }
 
-// -------------------- Main Dashboard --------------------
 export default function ManageFlightsDashboard() {
   const [flights, setFlights] = useState([]);
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState("");
   const [query, setQuery] = useState("");
-  const [sortBy, setSortBy] = useState("dep-asc"); 
+  const [sortBy, setSortBy] = useState("dep-asc");
   const [confirm, setConfirm] = useState(null);
 
   const navigate = useNavigate();
@@ -202,33 +199,33 @@ export default function ManageFlightsDashboard() {
   }, [flights, query, sortBy]);
 
   return (
-    <div className="admin-wrap">
-      <div className="admin-header">
-        <div className="admin-title-wrap">
-          <h2 className="admin-title">Manage Flights Dashboard</h2>
-          <p className="admin-sub">Create, edit, and remove flights. Access promo recipients.</p>
+    <div className="fli_admin-wrap">
+      <div className="fli_admin-header">
+        <div className="fli_admin-title-wrap">
+          <h2 className="fli_admin-title">Manage Flights Dashboard</h2>
+          <p className="fli_admin-sub">Create, edit, and remove flights. Access promo recipients.</p>
         </div>
-        <div className="admin-actions">
-          <button className="btn" onClick={handleGoToVisits}>👥 Promo Recipients</button>
-          <button className="btn btn-outline" onClick={fetchFlights}>↻ Refresh</button>
+        <div className="fli_admin-actions">
+          <button className="fli_btn" onClick={handleGoToVisits}>👥 Promo Recipients</button>
+          <button className="fli_btn fli_btn-outline" onClick={fetchFlights}>↻ Refresh</button>
         </div>
       </div>
 
       <AddFlightForm onFlightAdded={fetchFlights} />
 
-      <div className="toolbar">
-        <div className="toolbar-left">
+      <div className="fli_toolbar">
+        <div className="fli_toolbar-left">
           <input
-            className="input"
+            className="fli_input"
             placeholder="Search by route or description…"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />
         </div>
-        <div className="toolbar-right">
-          <label className="inline">
+        <div className="fli_toolbar-right">
+          <label className="fli_inline">
             Sort
-            <select className="select" value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
+            <select className="fli_select" value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
               <option value="dep-asc">From A → Z</option>
               <option value="dep-desc">From Z → A</option>
               <option value="dest-asc">To A → Z</option>
@@ -238,25 +235,25 @@ export default function ManageFlightsDashboard() {
         </div>
       </div>
 
-      {err && <div className="notice error">{err}</div>}
+      {err && <div className="fli_notice fli_error">{err}</div>}
 
-      <div className="table-wrap">
-        <table className="table">
+      <div className="fli_table-wrap">
+        <table className="fli_table">
           <thead>
             <tr>
               <th>Cover</th>
               <th>Departure</th>
               <th>Destination</th>
               <th>Description</th>
-              <th className="col-actions">Action</th>
+              <th className="fli_col-actions">Action</th>
             </tr>
           </thead>
           <tbody>
             {loading &&
               Array.from({ length: 6 }).map((_, i) => (
-                <tr key={`sk-${i}`} className="skeleton-row">
+                <tr key={`sk-${i}`} className="fli_skeleton-row">
                   <td colSpan={5}>
-                    <div className="skeleton-line w-100" />
+                    <div className="fli_skeleton-line fli_w-100" />
                   </td>
                 </tr>
               ))}
@@ -277,16 +274,16 @@ export default function ManageFlightsDashboard() {
                         }}
                       />
                     ) : (
-                      <div className="cover-placeholder">No Image</div>
+                      <div className="fli_cover-placeholder">No Image</div>
                     )}
                   </td>
                   <td>{f.departure}</td>
                   <td>{f.destination}</td>
-                  <td className="truncate">{f.description}</td>
-                  <td className="col-actions">
-                    <button className="btn btn-small" onClick={() => handleEdit(f)}>Edit</button>
+                  <td className="fli_truncate">{f.description}</td>
+                  <td className="fli_col-actions">
+                    <button className="fli_btn fli_btn-small" onClick={() => handleEdit(f)}>Edit</button>
                     <button
-                      className="btn btn-danger btn-small"
+                      className="fli_btn fli_btn-danger fli_btn-small"
                       onClick={() => handleDelete(f._id)}>Delete</button>
                   </td>
                 </tr>
@@ -294,7 +291,7 @@ export default function ManageFlightsDashboard() {
 
             {!loading && filtered.length === 0 && (
               <tr>
-                <td colSpan={5} className="empty">
+                <td colSpan={5} className="fli_empty">
                   No flights found.
                 </td>
               </tr>
@@ -304,17 +301,17 @@ export default function ManageFlightsDashboard() {
       </div>
 
       {confirm && (
-        <div className="modal" role="dialog" aria-modal="true" aria-labelledby="delTitle">
-          <div className="modal-panel">
+        <div className="fli_modal" role="dialog" aria-modal="true" aria-labelledby="delTitle">
+          <div className="fli_modal-panel">
             <h3 id="delTitle">Delete flight?</h3>
             <p>
               Are you sure you want to delete <strong>{confirm.route}</strong>? This action cannot be undone.
             </p>
-            <div className="modal-actions">
-              <button className="btn btn-secondary" onClick={() => setConfirm(null)}>
+            <div className="fli_modal-actions">
+              <button className="fli_btn fli_btn-secondary" onClick={() => setConfirm(null)}>
                 Cancel
               </button>
-              <button className="btn btn-danger" onClick={() => handleDelete(confirm.id)}>
+              <button className="fli_btn fli_btn-danger" onClick={() => handleDelete(confirm.id)}>
                 Delete
               </button>
             </div>
