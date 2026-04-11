@@ -1,4 +1,4 @@
-cat > README.md << 'EOF'
+
 # 🌍 Tourism Management Platform 🇱🇰
 
 A full‑stack **MERN‑based Tourism Management Platform**  
@@ -123,4 +123,4 @@ Includes requirement analysis, design diagrams, implementation details, testing,
 - Multi‑language & multi‑currency support  
 
 ---
-EOF
+
