@@ -1,0 +1,43 @@
+/* BookingChart.css */
+
+.A_chart-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #ffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.A_chart-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.A_chart-container h2 {
+  text-align: center;
+  color: #0b1d3a;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.A_chart-container p {
+  text-align: center;
+  color: #555;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .A_chart-container {
+    padding: 20px;
+    margin: 30px auto;
+  }
+
+  .A_chart-container h2 {
+    font-size: 1.5rem;
+  }
+}

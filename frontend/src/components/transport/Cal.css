@@ -1,0 +1,49 @@
+.A_cal-container {
+  max-width: 420px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: Arial, sans-serif;
+}
+
+.A_cal-container h2 {
+  text-align: center;
+  color: #0b3954;
+  margin-bottom: 20px;
+}
+
+.A_cal-container label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.A_cal-container input[type="number"],
+.A_cal-container input[type="date"] {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.A_cal-container input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.A_cal-container div {
+  margin-bottom: 8px;
+}
+
+.A_cal-container h3 {
+  text-align: center;
+  margin-top: 20px;
+  color: #007b55;
+  font-size: 20px;
+  font-weight: bold;
+}

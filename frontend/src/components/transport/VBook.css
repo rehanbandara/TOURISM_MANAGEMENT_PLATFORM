@@ -1,0 +1,230 @@
+/* Vehicle Booking Form - Tourism Theme */
+.A_tm-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: linear-gradient(-45deg, #0fc2c0, #ffffff, #97ddf8, #05a1a7);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(44, 90, 160, 0.3);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  position: relative;
+  overflow: hidden;
+}
+
+.A_tm-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.A_tm-container h1 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.A_booking-form {
+  background: rgba(97, 214, 102, 0.95);
+  padding: 35px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.A_booking-form .A_form-group {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.A_booking-form label {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #2c5aa0;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  position: relative;
+}
+
+.A_booking-form label::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(90deg, #195824, #37d569);
+  border-radius: 1px;
+}
+
+.A_booking-form input,
+.A_booking-form textarea,
+.A_booking-form select {
+  padding: 15px 18px;
+  border: 2px solid #e8f4f8;
+  border-radius: 12px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+  color: #2c3e50;
+  box-shadow: 0 2px 8px rgba(44, 90, 160, 0.1);
+}
+
+.A_booking-form input:focus,
+.A_booking-form textarea:focus,
+.A_booking-form select:focus {
+  outline: none;
+  border-color: #2c5aa0;
+  box-shadow: 0 0 0 4px rgba(44, 90, 160, 0.15);
+  transform: translateY(-2px);
+  background-color: #f8fbff;
+}
+
+.A_booking-form textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+}
+
+.A_booking-form input[type="file"] {
+  padding: 12px;
+  background: linear-gradient(135deg, #f8fbff 0%, #e8f4f8 100%);
+  border: 2px dashed #2c5aa0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.A_booking-form input[type="file"]:hover {
+  background: linear-gradient(135deg, #e8f4f8 0%, #d1e7f0 100%);
+  border-color: #4a90a4;
+  transform: translateY(-1px);
+}
+
+.A_booking-form input[readonly] {
+  background: linear-gradient(135deg, #f8fbff 0%, #e8f4f8 100%);
+  color: #7fb3d3;
+  cursor: not-allowed;
+  border-color: #d1e7f0;
+}
+
+.A_btn.A_add-btn {
+  width: 100%;
+  padding: 18px 30px;
+  background: linear-gradient(135deg, #2c5aa0 0%, #4a90a4 50%, #7fb3d3 100%);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  box-shadow: 0 6px 20px rgba(44, 90, 160, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.A_btn.A_add-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.A_btn.A_add-btn:hover::before {
+  left: 100%;
+}
+
+.A_btn.A_add-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(44, 90, 160, 0.6);
+  background: linear-gradient(135deg, #1e4a7a 0%, #3a7a8a 50%, #6ba3c3 100%);
+}
+
+.A_btn.A_add-btn:active {
+  transform: translateY(-1px);
+}
+
+.A_btn.A_add-btn:disabled {
+  background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.A_booking-form small {
+  color: #7fb3d3;
+  font-size: 13px;
+  margin-top: 8px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .A_tm-container {
+    margin: 20px;
+    padding: 25px;
+  }
+  
+  .A_tm-container h1 {
+    font-size: 2rem;
+  }
+  
+  .A_booking-form {
+    padding: 25px;
+  }
+}
+
+/* Animation for form appearance */
+.A_booking-form {
+  animation: slideInUp 0.8s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating animation for container */
+.A_tm-container {
+  animation: floatIn 1s ease-out;
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(60px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

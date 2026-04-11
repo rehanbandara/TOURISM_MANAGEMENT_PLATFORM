@@ -1,0 +1,15 @@
+
+nav {
+  background: #293e6a;
+  color: white;
+  padding: 1em 2em;
+  margin-bottom: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav a {
+  color: white;
+  margin-right: 1em;
+  font-weight: 500;
+}

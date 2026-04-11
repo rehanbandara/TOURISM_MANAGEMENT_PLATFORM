@@ -1,0 +1,111 @@
+/* UpdateVBook.css */
+
+/* General Form Styling */
+.A_updatevbook-form {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px 40px;
+  background-color: #4be98d;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Title Styling */
+.A_form-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 2.2em;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Form Group Layout */
+.A_form-group {
+  margin-bottom: 25px;
+}
+
+.A_form-group label {
+  display: block;
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+/* Input Fields */
+.A_form-input {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  color: #333;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.A_form-input:focus {
+  outline: none;
+  border-color: #8490ac;
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.25);
+}
+
+.A_form-input::placeholder {
+  color: #999;
+}
+
+/* Submit Button */
+.A_form-button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #0077ff, #000000); /* Gradient background */
+  color: white;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.A_form-button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #005fcc, #000000); /* Slight change on hover */
+}
+
+
+.A_form-button:active {
+  transform: translateY(0);
+}
+
+/* Loading State */
+h2 {
+  text-align: center;
+  color: #555;
+  margin-top: 50px;
+}
+
+/* License Image Preview */
+.A_license-image-preview {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .A_updatevbook-form {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .A_form-title {
+    font-size: 1.8em;
+  }
+}

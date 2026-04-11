@@ -1,0 +1,311 @@
+/* Bookings.css */
+
+/* General page styling */
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Loading and error */
+.loading,
+.error {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 18px;
+}
+
+.btn-retry {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.btn-retry:hover {
+  background-color: #ff4c4c;
+}
+
+/* Top actions */
+.top-actions {
+  text-align: right;
+  margin-bottom: 15px;
+}
+
+.btn-refresh {
+  padding: 8px 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn-refresh:hover {
+  background-color: #2980b9;
+}
+
+/* Filter section */
+.filter-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+.filter-select {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+/* Bookings section */
+.bookings-section h2 {
+  margin-bottom: 15px;
+}
+
+.no-bookings {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Bookings grid */
+.bookings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* Booking card */
+.booking-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  transition: transform 0.2s ease;
+}
+.booking-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Card header */
+.booking-card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.booking-id {
+  font-weight: bold;
+  color: #333;
+}
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.status-confirmed {
+  background-color: #2ecc71;
+}
+.status-cancelled {
+  background-color: #e74c3c;
+}
+.status-pending {
+  background-color: #f39c12;
+}
+
+/* Card body */
+.booking-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.guest-info h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.guest-contact span {
+  display: block;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Booking details */
+.booking-details .detail-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  padding: 2px 0;
+}
+.detail-label {
+  font-weight: bold;
+  color: #333;
+}
+.detail-value {
+  color: #555;
+}
+
+/* Additional info */
+.additional-info {
+  background-color: #f1f1f1;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Price */
+.booking-price {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.price-amount {
+  color: #27ae60;
+}
+
+/* Status update */
+.status-update {
+  margin-top: 10px;
+}
+.status-select {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+/* Card actions */
+.booking-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-download,
+.btn-delete {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.btn-download {
+  background-color: #3498db;
+  color: white;
+}
+.btn-download:hover {
+  background-color: #2980b9;
+}
+.btn-delete {
+  background-color: #e74c3c;
+  color: white;
+}
+.btn-delete:hover {
+  background-color: #c0392b;
+}
+
+/* Status Badges Container */
+.status-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+
+/* Payment Status Badges */
+.payment-paid {
+  background-color: #d4edda !important;
+  color: #155724 !important;
+  border: 1px solid #c3e6cb;
+}
+
+.payment-unpaid {
+  background-color: #f8d7da !important;
+  color: #721c24 !important;
+  border: 1px solid #f5c6cb;
+}
+
+.payment-refunded {
+  background-color: #e2e3e5 !important;
+  color: #383d41 !important;
+  border: 1px solid #d6d8db;
+}
+
+/* User ID Info */
+.user-id-info {
+  font-size: 13px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.user-id-info span {
+  display: block;
+}
+
+/* Payment Information Section */
+.payment-info {
+  background: linear-gradient(135deg, rgba(15, 194, 192, 0.08) 0%, rgba(0, 92, 75, 0.08) 100%);
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+  border: 1px solid rgba(15, 194, 192, 0.2);
+}
+
+.payment-info h4 {
+  margin: 0 0 10px 0;
+  color: #0fc2c0;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.payment-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.payment-details .detail-row {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.transaction-id {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: #666;
+  word-break: break-all;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .status-badges {
+    align-items: flex-start;
+  }
+  
+  .booking-card-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

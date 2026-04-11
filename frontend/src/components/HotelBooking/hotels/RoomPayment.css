@@ -1,0 +1,419 @@
+.MA-debit-card-payment {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.MA-payment-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.MA-payment-header h2 {
+  color: #1f2937;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.MA-total-amount {
+  font-size: 16px;
+  color: #6b7280;
+  margin-top: 10px;
+}
+
+.MA-total-amount strong {
+  color: #2563eb;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* Booking Summary */
+.MA-booking-summary-box {
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  border: 2px solid #e5e7eb;
+}
+
+.MA-booking-summary-box h3 {
+  color: #1f2937;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.MA-summary-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.MA-summary-row {
+  display: flex;
+  justify-content: space-between;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.MA-summary-row span:first-child {
+  font-weight: 500;
+}
+
+.MA-summary-row span:last-child {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Card Preview */
+.MA-card-preview {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 30px;
+  border-radius: 16px;
+  color: white;
+  margin-bottom: 30px;
+  min-height: 200px;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+}
+
+.MA-card-preview:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+}
+
+.MA-card-preview.visa {
+  background: linear-gradient(135deg, #1a1f71 0%, #0f3460 100%);
+}
+
+.MA-card-preview.mastercard {
+  background: linear-gradient(135deg, #eb001b 0%, #f79e1b 100%);
+}
+
+.MA-card-preview.amex {
+  background: linear-gradient(135deg, #006fcf 0%, #00a3e0 100%);
+}
+
+.MA-card-chip {
+  width: 50px;
+  height: 40px;
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.MA-card-chip::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.MA-card-number {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+  font-family: 'Courier New', monospace;
+}
+
+.MA-card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.MA-card-holder,
+.MA-card-expiry {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.MA-label {
+  font-size: 10px;
+  opacity: 0.8;
+  letter-spacing: 1px;
+}
+
+.MA-value {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+}
+
+.MA-card-logo {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 24px;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+/* Payment Form */
+.MA-payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.MA-form-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.MA-form-group label {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.MA-form-group input,
+.MA-form-group select {
+  padding: 14px;
+  border: 2px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  font-family: 'Courier New', monospace;
+}
+
+.MA-form-group input:focus,
+.MA-form-group select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.MA-form-group input.error,
+.MA-form-group select.error {
+  border-color: #dc2626;
+}
+
+.MA-error-message {
+  color: #dc2626;
+  font-size: 13px;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.MA-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+/* Security Info */
+.MA-security-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f0fdf4;
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid #86efac;
+  margin: 20px 0;
+}
+
+.MA-security-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.MA-lock-icon {
+  font-size: 28px;
+}
+
+.MA-security-badge strong {
+  display: block;
+  color: #166534;
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+
+.MA-security-badge p {
+  margin: 0;
+  color: #15803d;
+  font-size: 13px;
+}
+
+.MA-ssl-badge {
+  background: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  color: #166534;
+  font-weight: 600;
+  font-size: 13px;
+  border: 1px solid #86efac;
+}
+
+.MA-ssl-badge span {
+  color: #16a34a;
+  margin-right: 5px;
+}
+
+/* Pay Button */
+.MA-btn-pay {
+  padding: 18px;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.MA-btn-pay:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+}
+
+.MA-btn-pay:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Spinner */
+.MA-spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Cancel Button */
+.MA-btn-cancel {
+  width: 100%;
+  padding: 14px;
+  background: #f3f4f6;
+  color: #374151;
+  border: 2px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+.MA-btn-cancel:hover:not(:disabled) {
+  background: #e5e7eb;
+  border-color: #9ca3af;
+}
+
+.MA-btn-cancel:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Payment Footer */
+.MA-payment-footer {
+  text-align: center;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.MA-payment-footer p {
+  color: #6b7280;
+  font-size: 13px;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .MA-debit-card-payment {
+    padding: 20px;
+  }
+
+  .MA-payment-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .MA-total-amount strong {
+    font-size: 20px;
+  }
+
+  .MA-card-preview {
+    padding: 25px;
+    min-height: 180px;
+  }
+
+  .MA-card-number {
+    font-size: 20px;
+  }
+
+  .MA-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .MA-security-info {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .MA-btn-pay {
+    font-size: 16px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .MA-debit-card-payment {
+    padding: 15px;
+  }
+
+  .MA-payment-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .MA-card-preview {
+    padding: 20px;
+  }
+
+  .MA-card-number {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  .MA-value {
+    font-size: 14px;
+  }
+
+  .MA-form-group input,
+  .MA-form-group select {
+    padding: 12px;
+    font-size: 15px;
+  }
+}

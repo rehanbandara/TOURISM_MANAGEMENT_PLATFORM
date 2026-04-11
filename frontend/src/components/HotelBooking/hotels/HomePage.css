@@ -1,0 +1,196 @@
+/* HomePage.css */
+
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.MA-homepage {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.MA-hero {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.MA-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.MA-hero h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.MA-hero p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Booking Search Form */
+.MA-booking-search {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #333;
+}
+
+.MA-booking-search h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.MA-booking-search .MA-form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.MA-booking-search .MA-form-group {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.MA-booking-search label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.MA-booking-search input,
+.MA-booking-search select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Blue Search Button */
+.MA-booking-search .MA-btn-primary {
+  background-color: #007bff; /* Blue color */
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.MA-booking-search .MA-btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Hotels Section */
+.MA-hotels-section {
+  padding: 3rem 1rem;
+  background-color: #f9f9f9;
+}
+
+.MA-hotels-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.MA-hotels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.MA-hotel-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.MA-hotel-card:hover {
+  transform: translateY(-5px);
+}
+
+.MA-hotel-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.MA-hotel-details {
+  padding: 1rem;
+}
+
+.MA-hotel-details h3 {
+  margin-bottom: 0.5rem;
+}
+
+.MA-hotel-type,
+.MA-hotel-city,
+.MA-hotel-desc {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+.MA-btn-secondary {
+  display: inline-block;
+  text-align: center;
+  background: #fff;
+  color: #355ca9;
+  padding: 10px 20px;
+  border: 2px solid #355ca9;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.MA-btn-secondary:hover {
+  background: #355ca9;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.MA-btn-secondary:active {
+  transform: scale(0.97);
+  background: #2c4989;
+  border-color: #2c4989;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .MA-booking-search .MA-form-row {
+    flex-direction: column;
+  }
+}

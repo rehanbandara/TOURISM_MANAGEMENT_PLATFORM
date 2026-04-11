@@ -1,0 +1,162 @@
+/* General page */
+.page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Buttons */
+.btn-add, .btn-save, .btn-cancel, .btn-edit, .btn-delete {
+  padding: 8px 16px;
+  margin: 5px 5px 0 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-add {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.btn-save {
+  background-color: #2196f3;
+  color: #fff;
+}
+
+.btn-cancel {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.btn-edit {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+.btn-delete {
+  background-color: #f44336;
+  color: #fff;
+}
+
+/* Form card */
+.form-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.form-card h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="file"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.error-text {
+  color: #f44336;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+/* Form actions */
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Preview images grid */
+.preview-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.preview-grid img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Gallery grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Photo card */
+.photo-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-image img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.photo-info {
+  padding: 10px;
+  flex-grow: 1;
+}
+
+.photo-info p {
+  margin: 3px 0;
+  font-size: 14px;
+}
+
+.photo-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px 10px 10px 10px;
+}
+
+/* No photos message */
+.no-photos {
+  margin-top: 20px;
+  color: #555;
+}
+
+/* Error message */
+.error {
+  color: #f44336;
+  margin-top: 10px;
+}

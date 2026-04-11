@@ -1,0 +1,405 @@
+/* ========== GENERAL LAYOUT ========== */
+.MA-hotel-detail-page {
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  line-height: 1.6;
+  background: #fafafa;
+  min-height: 100vh;
+}
+
+/* ========== LOADING ========== */
+.MA-loading {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 80px;
+  color: #777;
+}
+
+/* ========== IMAGE CAROUSEL ========== */
+.MA-header-gallery {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 0 0 20px 20px;
+}
+
+.MA-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+}
+
+.MA-nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  font-size: 2.5rem;
+  padding: 10px 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s ease;
+  z-index: 10;
+}
+
+.MA-nav-arrow:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.MA-nav-arrow.left {
+  left: 20px;
+}
+
+.MA-nav-arrow.right {
+  right: 20px;
+}
+
+/* ========== MAIN LAYOUT ========== */
+.MA-main-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 80px;
+}
+
+.MA-left-content {
+  flex: 1;
+  min-width: 65%;
+}
+
+.MA-right-sidebar {
+  flex: 0 0 300px;
+  position: sticky;
+  top: 100px;
+  align-self: flex-start;
+}
+
+/* ========== OVERVIEW SECTION ========== */
+.MA-section {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 25px;
+  padding: 25px 30px;
+}
+
+.overview h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.MA-hotel-location {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.MA-hotel-desc {
+  color: #333;
+}
+
+/* ========== GUEST GALLERY CTA ========== */
+.MA-gallery-cta-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.MA-gallery-cta-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.MA-gallery-cta-text {
+  flex: 1;
+}
+
+.MA-view-gallery-btn {
+  background: linear-gradient(135deg, #0077ff, #00b4ff);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.MA-view-gallery-btn:hover {
+  background: linear-gradient(135deg, #0064e1, #009dd8);
+  transform: scale(1.05);
+}
+
+/* ========== FACILITIES ========== */
+.MA-facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px 20px;
+  margin-top: 15px;
+}
+
+.MA-facility-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #333;
+  background: #f9f9f9;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+/* ========== ROOMS SECTION ========== */
+.MA-rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.MA-room-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.MA-room-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.MA-room-info {
+  padding: 15px;
+}
+
+.MA-room-info h4 {
+  margin: 5px 0;
+  font-size: 1.2rem;
+}
+
+.MA-room-price {
+  color: #0077ff;
+  font-weight: bold;
+}
+
+.MA-book-room-btn {
+  margin-top: 10px;
+  background: #0077ff;
+  color: #fff;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.MA-book-room-btn:hover {
+  background: #005ec2;
+}
+
+/* ========== RIGHT SIDEBAR CTA ========== */
+.MA-quick-booking-cta {
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.MA-cta-book-btn {
+  margin-top: 10px;
+  background: #0077ff;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.MA-cta-book-btn:hover {
+  background: #005ec2;
+}
+
+/* ========== BOOKING MODAL ========== */
+.MA-booking-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 20, 20, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.MA-booking-modal {
+  background: #fff;
+  width: 90%;
+  max-width: 1000px;
+  border-radius: 16px;
+  padding: 30px;
+  position: relative;
+  overflow-y: auto;
+  max-height: 90vh;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.MA-close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.MA-modal-content {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.MA-booking-form-modal {
+  flex: 1.5;
+}
+
+.MA-price-summary-sidebar {
+  flex: 1;
+  background: #f9fafc;
+  border-radius: 10px;
+  padding: 15px;
+  height: fit-content;
+}
+
+.MA-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.MA-form-section {
+  margin-bottom: 20px;
+}
+
+.MA-booking-form-modal input,
+.MA-booking-form-modal select,
+.MA-booking-form-modal textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.MA-submit-booking-btn {
+  width: 100%;
+  background: #0077ff;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.MA-submit-booking-btn:hover {
+  background: #005ec2;
+}
+
+/* ========== PRICE SUMMARY ========== */
+.MA-price-breakdown {
+  margin-top: 15px;
+}
+
+.MA-price-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+}
+
+.MA-divider {
+  height: 1px;
+  background: #ddd;
+  margin: 10px 0;
+}
+
+.MA-price-row.total {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* ========== PAYMENT MODAL ========== */
+.payment-modal {
+  width: 500px;
+  text-align: center;
+}
+
+/* ========== GALLERY MODAL ========== */
+.MA-gallery-modal-fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 15, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+
+.MA-gallery-modal-content {
+  background: #fff;
+  width: 90%;
+  max-width: 1100px;
+  border-radius: 14px;
+  padding: 20px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.MA-close-gallery-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.8rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+  .MA-main-section {
+    padding: 20px;
+  }
+
+  .MA-modal-content {
+    flex-direction: column;
+  }
+
+  .MA-right-sidebar {
+    display: none;
+  }
+
+  .MA-booking-modal {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,525 @@
+.page {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  background-color: #f9fafb;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+h2 {
+  color: #444;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+h3 {
+  color: #555;
+  margin: 15px 0 10px;
+  font-size: 1.2rem;
+}
+
+/* Top Actions Bar */
+.top-actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+/* Blue Buttons Styling */
+.btn-add {
+  background-color: #0B1D3A;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-add:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-refresh {
+  background-color: #0B1D3A;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-refresh:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-delete {
+  background-color: #ff0000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  flex: 1;
+  transition: background-color 0.3s ease;
+}
+
+.btn-delete:hover {
+  background-color: #ff0000;
+}
+
+.btn-edit {
+  background-color: #0B1D3A;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  flex: 1;
+  transition: background-color 0.3s ease;
+}
+
+.btn-edit:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-save {
+  background-color: #0B1D3A;
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-save:hover {
+  background-color: #0B1D3A;
+}
+
+.btn-cancel {
+  background-color: #dc2626;
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cancel:hover {
+  background-color: #b91c1c;
+}
+
+.btn-retry {
+  background-color: #0B1D3A;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-retry:hover {
+  background-color: #1d4ed8;
+}
+
+/* Form Card Styling */
+.form-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #374151;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #1d4ed8;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-group input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+/* Amenities Section */
+.amenities-section {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f9fafb;
+  border-radius: 6px;
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.amenity-checkbox {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.amenity-checkbox:hover {
+  background-color: #f3f4f6;
+}
+
+.amenity-checkbox input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid #e5e7eb;
+}
+
+/* Rooms Section */
+.rooms-section {
+  margin-top: 30px;
+}
+
+.rooms-section h2 {
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+/* Rooms Grid */
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+/* Room Card */
+.room-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.room-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+}
+
+.room-number-badge {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.room-price {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.room-price span {
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.room-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: #f3f4f6;
+}
+
+.room-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.room-card-body {
+  padding: 20px;
+}
+
+.room-type {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 5px 0;
+}
+
+.room-hotel {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0 0 15px 0;
+}
+
+.room-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: #f9fafb;
+  border-radius: 6px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-label {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 2px;
+}
+
+.detail-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.room-description {
+  color: #4b5563;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 15px 0;
+}
+
+.room-amenities {
+  margin-top: 15px;
+}
+
+.room-amenities strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #374151;
+  font-size: 14px;
+}
+
+.amenity-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.amenity-tag {
+  display: inline-block;
+  padding: 5px 12px;
+  background-color: #dbeafe;
+  color: #1e40af;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.extra-bed-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: #dcfce7;
+  color: #1e40af;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.room-card-actions {
+  display: flex;
+  gap: 10px;
+  padding: 15px 20px;
+  background-color: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Loading and Error States */
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #6b7280;
+  font-size: 18px;
+}
+
+.error {
+  background-color: #fee2e2;
+  border: 1px solid #fca5a5;
+  color: #991b1b;
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+.error p {
+  margin: 0 0 10px 0;
+}
+
+.no-rooms {
+  text-align: center;
+  padding: 40px;
+  color: #6b7280;
+  font-size: 16px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .rooms-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .amenities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .top-actions {
+    flex-direction: column;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn-cancel {
+    margin-left: 0;
+  }
+
+  .rooms-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .room-details {
+    grid-template-columns: 1fr;
+  }
+
+  .room-card-actions {
+    flex-direction: column;
+  }
+
+  .btn-edit,
+  .btn-delete {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .page {
+    padding: 15px;
+  }
+
+  .btn-add,
+  .btn-save,
+  .btn-cancel,
+  .btn-refresh {
+    width: 100%;
+  }
+
+  .room-price {
+    font-size: 20px;
+  }
+
+  .room-number-badge {
+    font-size: 16px;
+  }
+
+  .room-type {
+    font-size: 18px;
+  }
+
+  .btn-edit {
+  background-color: #0B1D3A !important;
+  color: white !important;
+}
+}

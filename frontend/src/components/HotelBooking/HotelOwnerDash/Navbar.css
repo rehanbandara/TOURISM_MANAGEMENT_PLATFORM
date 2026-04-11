@@ -1,0 +1,45 @@
+/* Navbar.css */
+
+.navbar {
+  background-color: #ffffff; /* clean white background */
+  border-bottom: 1px solid #e5e7eb; /* subtle divider line */
+  padding: 12px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05); /* soft shadow */
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 32px; /* spacing between links */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none; /* remove underline */
+  color: #333; /* dark text for contrast */
+  font-weight: 500;
+  font-size: 16px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #007bff; /* blue hover effect */
+  background-color: #f2f6ff; /* light blue background */
+}
+
+.nav-link.active {
+  color: #ffffff;
+  background-color: #007bff; /* active page highlight */
+  font-weight: 600;
+}

@@ -1,0 +1,166 @@
+/* =========================
+   Main Container
+========================= */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f8f9fa;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 10px;
+}
+
+/* =========================
+   Card
+========================= */
+.register-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 420px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* =========================
+   Title
+========================= */
+.register-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #222;
+}
+
+/* =========================
+   Input Fields
+========================= */
+.register-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.register-input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 4px rgba(74, 144, 226, 0.3);
+}
+
+/* =========================
+   Phone Input (react-phone-input-2)
+========================= */
+.react-tel-input {
+  margin-bottom: 12px;
+}
+
+.react-tel-input .flag-dropdown {
+  border: none;
+  background: transparent;
+}
+
+.react-tel-input .selected-flag {
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+  background: #fff;
+  border-right: 1px solid #ddd;
+  border-radius: 10px 0 0 10px;
+}
+
+.react-tel-input .form-control {
+  padding-left: 65px !important; /* ✅ enough space for flag + code */
+  height: 45px;
+  width: 100%;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px !important;
+  background: #fff;
+}
+
+.react-tel-input .form-control:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 4px rgba(74, 144, 226, 0.3);
+}
+
+/* =========================
+   Buttons
+========================= */
+.register-button,
+.resend-button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.register-button {
+  background-color: #4a90e2;
+  color: white;
+  font-weight: bold;
+}
+
+.register-button:hover {
+  background-color: #357abd;
+}
+
+.resend-button {
+  margin-top: 10px;
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.resend-button:hover {
+  background-color: #e2e2e2;
+}
+
+/* =========================
+   Animation
+========================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================
+   Popup Messages
+========================= */
+.popup-message {
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup-message.success {
+  background: #e6f7ee;
+  color: #1a7f37;
+  border: 1px solid #a4e1b4;
+}
+
+.popup-message.error {
+  background: #fde8e8;
+  color: #b91c1c;
+  border: 1px solid #f5c2c2;
+}

@@ -1,0 +1,309 @@
+/* HM Hotel Bookings Styles - Uses unified-styles.css as base */
+
+.HM-bookings-container {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.HM-bookings-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  animation: CH-fadeInUp 0.6s ease-out;
+}
+
+.HM-bookings-subtitle {
+  color: #64748b;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.HM-bookings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 2rem;
+  animation: CH-fadeInUp 0.8s ease-out;
+}
+
+.HM-booking-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(15, 194, 192, 0.1);
+}
+
+.HM-booking-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(15, 194, 192, 0.2);
+}
+
+.HM-booking-card-header {
+  background: linear-gradient(135deg, #0fc2c0 0%, #005c4b 100%);
+  color: white;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.HM-booking-id {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.HM-booking-id .HM-label {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.HM-booking-id .HM-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.HM-booking-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+
+.HM-status-badge,
+.HM-payment-badge {
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.HM-status-confirmed {
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.HM-status-pending {
+  background: rgba(245, 158, 11, 0.2);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.HM-status-cancelled {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.HM-payment-paid {
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.HM-payment-unpaid {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.HM-payment-refunded {
+  background: rgba(100, 116, 139, 0.2);
+  color: #64748b;
+  border: 1px solid rgba(100, 116, 139, 0.3);
+}
+
+.HM-booking-card-body {
+  padding: 2rem;
+}
+
+.HM-info-section {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(15, 194, 192, 0.1);
+}
+
+.HM-info-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.HM-section-title {
+  color: #0fc2c0;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.HM-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  background: rgba(15, 194, 192, 0.03);
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.HM-info-row:hover {
+  background: rgba(15, 194, 192, 0.08);
+}
+
+.HM-info-row:last-child {
+  margin-bottom: 0;
+}
+
+.HM-info-row .HM-label {
+  font-weight: 600;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.HM-info-row .HM-value {
+  font-weight: 500;
+  color: #1e293b;
+  text-align: right;
+  max-width: 60%;
+  word-wrap: break-word;
+}
+
+.HM-value.HM-date {
+  color: #0fc2c0;
+  font-weight: 600;
+}
+
+.HM-value.HM-price {
+  color: #10b981;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.HM-value.HM-transaction {
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.HM-payment-section {
+  background: linear-gradient(135deg, rgba(15, 194, 192, 0.05) 0%, rgba(0, 92, 75, 0.05) 100%);
+  padding: 1.25rem;
+  border-radius: 12px;
+  border: 2px solid rgba(15, 194, 192, 0.1);
+}
+
+.HM-additional-info {
+  background: rgba(15, 194, 192, 0.05);
+  padding: 1rem;
+  border-radius: 8px;
+  color: #475569;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.HM-booking-card-footer {
+  padding: 1rem 2rem;
+  background: rgba(15, 194, 192, 0.05);
+  border-top: 1px solid rgba(15, 194, 192, 0.1);
+}
+
+.HM-booking-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.HM-booking-date .HM-label {
+  color: #64748b;
+  font-weight: 500;
+}
+
+.HM-booking-date .HM-value {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .HM-bookings-grid {
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .HM-bookings-container {
+    padding: 1rem;
+  }
+
+  .HM-bookings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .HM-booking-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .HM-booking-badges {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .HM-info-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .HM-info-row .HM-value {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .HM-booking-card-body {
+    padding: 1.5rem;
+  }
+
+  .HM-booking-date {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .HM-bookings-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .HM-bookings-subtitle {
+    font-size: 1rem;
+  }
+
+  .HM-booking-card-body {
+    padding: 1rem;
+  }
+
+  .HM-section-title {
+    font-size: 0.95rem;
+  }
+
+  .HM-info-row .HM-label,
+  .HM-info-row .HM-value {
+    font-size: 0.9rem;
+  }
+}
+
