@@ -1,4 +1,3 @@
-
 # 🌍 Tourism Management Platform 🇱🇰
 
 A full‑stack **MERN‑based Tourism Management Platform**  
@@ -124,3 +123,40 @@ Includes requirement analysis, design diagrams, implementation details, testing,
 
 ---
 
+## ⚙️ How to Run the Project
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/rehanbandara/TOURISM_MANAGEMENT_PLATFORM.git
+cd TOURISM_MANAGEMENT_PLATFORM
+```
+
+## ⚙️ How to Run the Project
+
+### 2. Install dependencies
+For both frontend and backend:
+
+```bash
+# Backend
+cd backend
+npm install
+
+# Frontend
+cd ../frontend
+npm install
+
+```
+### 3. Run the project
+# Backend
+```bash
+cd backend
+npm start
+```
+# Frontend
+```bash
+cd ../frontend
+npm start
+```
+
+###📜 License
+This project is licensed under the MIT License.
